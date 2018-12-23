@@ -79,8 +79,8 @@ export const Product=()=>{
         },
         {
             path:'/othercosmetics',
-            name:'기타',
-            category:'기타'
+            name:'기타화장품',
+            category:'기타화장품'
         },
     ]
 

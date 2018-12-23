@@ -12,11 +12,13 @@ export class ProductList extends React.Component {
     }
 
     componentDidMount() {
-        axios.get("http://13.125.89.0/chemical/items_limit.php")
+        const params = new URLSearchParams();
+        params.append("category", this.props.category);
+
+        axios.post("http://13.125.89.0/chemical/items_limit.php", params)
             .then(res => {
                 const products = res;
                 this.setState({ chemicals: products.data[0] });
-                console.log(products.data[0][0].image);
             })
     }
     
